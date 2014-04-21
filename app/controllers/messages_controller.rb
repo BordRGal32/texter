@@ -11,7 +11,10 @@ class MessagesController < ApplicationController
       redirect_to :back
     else
       flash[:alert] = "Something went wrong."
-      render "index"
+      @user = current_user
+      @contacts = @user.contacts
+      @contact = Contact.new
+      render('users/show')
     end
   end
 

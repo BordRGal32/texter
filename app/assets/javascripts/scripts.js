@@ -3,5 +3,8 @@ $(document).ready(function() {
   $('.new').click(function() {
     $('.btn-hide').hide();
     $('.hidden-form').toggle();
-   });
+  });
 });
+
+
+

@@ -9,6 +9,7 @@
   background-color: #FF0066;
   color: white;
   border-radius: 10px;
+  margin: 10px;
 }
 .navbar a{
   color: white;
@@ -25,4 +26,12 @@ a:hover {
 
 body {
   padding-top:70px;
+}
+
+#contact-list li {
+  display: inline-block;
+  margin: 10px;
+  padding: 3px 6px;
+  border-radius: 2px;
+  background-color: purple;
 }

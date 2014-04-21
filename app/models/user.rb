@@ -5,4 +5,6 @@
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :username, uniqueness: true
+
+  has_many :contacts
 end

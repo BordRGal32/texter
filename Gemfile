@@ -7,6 +7,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'turbolinks'
 gem 'jbuilder'
 gem 'bcrypt'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
@@ -23,6 +24,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'

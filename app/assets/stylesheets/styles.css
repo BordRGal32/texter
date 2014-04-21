@@ -1,0 +1,28 @@
+.alert-purple {
+  background-color: purple;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.btn-pink {
+  background-color: #FF0066;
+  color: white;
+  border-radius: 10px;
+}
+.navbar a{
+  color: white;
+  font-size: 20px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #FF8585;
+}
+
+body {
+  padding-top:70px;
+}

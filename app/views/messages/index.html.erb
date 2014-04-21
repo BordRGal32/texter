@@ -1,8 +1,8 @@
 <h1>Messages</h1>
 
-<%= link_to 'New Message', "#", class: 'btn btn-success', data: { toggle: 'modal', target: '#newMessage'} %>
-
 <%= render('layouts/errors', :object => @message ) %>
+
+<%= link_to 'New Message', "#", class: 'btn btn-pink', data: { toggle: 'modal', target: '#newMessage'} %>
 
 <div class="modal fade" id="newMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

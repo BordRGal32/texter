@@ -7,10 +7,10 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(messages_params)
     if @message.save
-      flash[:notice] = "Text Sent"
+      flash[:notice] = "Text Sent."
       redirect_to :back
     else
-      flash[:notice] = "something went wrong"
+      flash[:alert] = "Something went wrong."
       render "index"
     end
   end

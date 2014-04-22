@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @user = User.find(params[:user_id])
     @contacts = @user.contacts
-
+    @messages = Message.all
     if @contact.save
       flash[:notice] = "Your contact has been saved!"
       redirect_to :back
@@ -41,6 +41,6 @@ class ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:contact).permit(:name, :phone_number)
+    params.require(:contact).permit(:name, :phone_number, :user_id)
   end
 end

@@ -5,6 +5,7 @@ class UsersController <ApplicationController
     @message = Message.new
     @contact = Contact.new
     @contacts = @user.contacts
+    @messages = Message.all
   end
 
   private

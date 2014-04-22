@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :message, :class => Message do
-    to "5036102940"
+    to ["", "5036102940"]
     from "8027780526"
-    body Faker::Company.bs
+    body "I am a message"
   end
 end

@@ -9,7 +9,7 @@
 
 <h2>Contacts</h2>
 <p>Here are all of your contacts!</p>
-
+<div class="col-md-6">
 <ul>
   <div id="contact-list">
     <% @contacts.each do |contact| %>
@@ -19,6 +19,23 @@
     <% end %>
   </div>
 </ul>
+</div>
+
+<div class="col-md-6">
+<h2>Messages</h2>
+<p>Here are all of your messages!</p>
+<div id="message-list">
+  <ul>
+    <% if !@messages.nil? %>
+      <% @messages.each do |message| %>
+        <div class="row">
+          <li><%= message.body %></li>
+        </div>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+</div>
 
 
 <div class="modal fade" id="newContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

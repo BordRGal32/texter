@@ -2,20 +2,34 @@ class Message < ActiveRecord::Base
   before_create :send_message
 
   private
-  def send_message(array)
+  # def send_message
+  #   recipients = []
+  #   self.to.shift
+  #   self.to.uniq!
+  #   self.to.each do |to_number|
+  #     sending_message(body, to_number, from)
+  #     #   recipients << "false"
+  #     # else
+  #     #   recipients << "true"
+  #     # end
+  #   end
+  # end
+
+  def send_message
     begin
-      array.each do |phone|
+      self.to.shift
+      self.to.uniq!
+      self.to.each do |to_number|
         response = RestClient::Request.new(
           :method => :post,
           :url => "https://api.twilio.com/2010-04-01/Accounts/#{ENV['TWILIO_ACCOUNT_SID']}/Messages.json",
           :user => ENV["TWILIO_ACCOUNT_SID"],
           :password => ENV["TWILIO_AUTH_TOKEN"],
           :payload => { :Body => body,
-                        :To => phone.phone_number,
+                        :To => to_number,
                         :From => from }
-
           ).execute
-      end
+        end
     rescue RestClient::BadRequest => error
       message = JSON.parse(error.response)['message']
       errors.add(:base, message)

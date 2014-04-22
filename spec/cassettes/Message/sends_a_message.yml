@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<twilio account sid>:<twilio auth token>@api.twilio.com/2010-04-01/Accounts/<twilio
+      account sid>/Messages.json
+    body:
+      encoding: US-ASCII
+      string: Body=You%20are%20awesome%20LOL!&To=5036102940&From=8027780526
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '61'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Date:
+      - Tue, 22 Apr 2014 20:30:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '710'
+      Connection:
+      - close
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+    body:
+      encoding: UTF-8
+      string: "{\"sid\": \"SM83631e6ebb8c40a2aa7dfa0ac62ed89b\", \"date_created\":
+        \"Tue, 22 Apr 2014 20:30:31 +0000\", \"date_updated\": \"Tue, 22 Apr 2014
+        20:30:31 +0000\", \"date_sent\": null, \"account_sid\": \"<twilio account
+        sid>\", \"to\": \"+15036102940\", \"from\": \"+18027780526\", \"body\": \"You
+        are awesome LOL!\", \"status\": \"queued\", \"num_segments\": \"1\", \"num_media\":
+        \"0\", \"direction\": \"outbound-api\", \"api_version\": \"2010-04-01\", \"price\":
+        null, \"price_unit\": \"USD\", \"uri\": \"/2010-04-01/Accounts/<twilio account
+        sid>/Messages/SM83631e6ebb8c40a2aa7dfa0ac62ed89b.json\", \"subresource_uris\":
+        {\"media\": \"/2010-04-01/Accounts/<twilio account sid>/Messages/SM83631e6ebb8c40a2aa7dfa0ac62ed89b/Media.json\"}}"
+    http_version: 
+  recorded_at: Tue, 22 Apr 2014 20:37:32 GMT
+recorded_with: VCR 2.9.0

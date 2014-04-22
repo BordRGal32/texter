@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(messages_params)
+    @messages = Message.all
     if @message.save
       flash[:notice] = "Text Sent."
       redirect_to :back
@@ -20,6 +21,6 @@ class MessagesController < ApplicationController
 
   private
   def messages_params
-    params.require(:message).permit(:to, :from, :body, :status)
+    params.require(:message).permit(:from, :body, :status, :to => [])
   end
 end

@@ -15,6 +15,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'cancancan'
 gem 'rest-client'
+gem 'select2-rails'
 
 group :development do
   gem 'better_errors'

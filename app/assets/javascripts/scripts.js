@@ -4,7 +4,12 @@ $(document).ready(function() {
     $('.btn-hide').hide();
     $('.hidden-form').toggle();
   });
+  $("#e9").select2();
 });
+
+
+
+
 
 
 

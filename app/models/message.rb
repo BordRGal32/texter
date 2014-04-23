@@ -2,19 +2,6 @@ class Message < ActiveRecord::Base
   before_create :send_message
 
   private
-  # def send_message
-  #   recipients = []
-  #   self.to.shift
-  #   self.to.uniq!
-  #   self.to.each do |to_number|
-  #     sending_message(body, to_number, from)
-  #     #   recipients << "false"
-  #     # else
-  #     #   recipients << "true"
-  #     # end
-  #   end
-  # end
-
   def send_message
     begin
       self.to.shift

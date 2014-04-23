@@ -64,7 +64,7 @@
         <%= form_for(@message) do |f| %>
           <%= f.hidden_field :from, value: "8027780526" %>
           <div class ="form-group">
-            <%= f.label :to %>
+            <%= f.label :to %><br>
             <%= collection_select(:message, :to, @contacts, :phone_number, :name, {}, {id: "e9", style: "width:300px", multiple: true}) %>
           </div>
           <div class="form-group">

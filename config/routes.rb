@@ -7,4 +7,7 @@ Texter::Application.routes.draw do
   end
 
   resources :contacts, only: [:show, :update, :destroy]
+
+  post 'incomingmessages', to: "incomings#create"
+  get 'incomingmessages', to: "incomings#new"
 end

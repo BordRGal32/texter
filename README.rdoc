@@ -2,9 +2,7 @@
 
 ==== Epicodus Week 10 Day 1
 
-<em>Lauren Yeiser and Liz Tom</em>
-
-This is a texting app using the Twilio API.
+Purpose: Completed as part of the Epicodus Curriculum. This is a texting app using the Twilio API.
 
 -------
 * As a user, I want to send a text message to a phone number, so that I can send texts from the web. Hint: Follow along with the lesson.
